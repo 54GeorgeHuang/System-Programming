@@ -1,6 +1,7 @@
 #include "apue.h"
-
-#define	BUFFSIZE 16384	
+#ifndef BUFFSIZE
+#define BUFFSIZE 100
+#endif
 
 int main(void)
 {
@@ -16,6 +17,7 @@ int main(void)
 
 		if (n < 0)
 				err_sys("read error");
+
 
 		exit(0);
 }
